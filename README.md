@@ -93,7 +93,9 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Programar envío de informe.
     - Aviso urgente en caso de fallo de copia.
 - [**09. Reenviar informes**](09-reenviar.md):
-    - 
+    - Descripción del problema.
+    - Configurar reintentos.
+    - Prueba de reintentos.
 
 ## Tecnologías usadas
 
