@@ -205,7 +205,7 @@ Y se desarrolla:
 USUARIOS="user1 user2"
 DESTINO="/srv/copias"
 REGISTRO="/var/log/copias.log"
-MAX_BORRADOS=100
+MAX_BORRADOS=300
 OPCIONES=(-aHAX --delete --exclude=lost+found)
 
 registrar() {
@@ -248,6 +248,9 @@ done
 registrar "Fin de la copia"
 exit $errores
 ```
+> [! NOTE]
+> En una versión anterior del documento `MAX_BORRADOS` estaba en 100.
+
 
 ## Permisos y primera ejecución
 

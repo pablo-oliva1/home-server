@@ -43,15 +43,15 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 
 ## Proceso
 
-- [**1. Instalación**](01-instalacion.md):
+- [**1. Instalación**](01-instalacion.md): se instala sistema operativo en el equipo que hará de servidor.
     - Especificaciones del equipo.
     - Instalación de sistema operativo.
     - Primer arranque y comprobación.
-- [**2. SSH y red**](02-ssh-red.md):
+- [**2. SSH y red**](02-ssh-red.md): se establece una IP fija.
     - Conexión con el servidor.
     - Comprobación de configuración de red.
     - Establecer una IP fija.
-- [**3. Ajustes**](03-ajustes.md):
+- [**3. Ajustes**](03-ajustes.md): se establece una configuración básica al equipo que hará de servidor.
     - Actualizaciones automáticas.
     - Modificar comportamiento de la tapa.
 - [**4. Discos**](04-discos.md):
@@ -92,7 +92,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Automatizar envío de informe por email.
     - Programar envío de informe.
     - Aviso urgente en caso de fallo de copia.
-- [**09. Reenviar informes**](09-reenviar.md):
+- [**9. Reenviar informes**](09-reenviar.md): se arregla problema de interrupción de envío de informe.
     - Descripción del problema.
     - Configurar reintentos.
     - Prueba de reintentos.
