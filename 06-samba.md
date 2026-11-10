@@ -312,6 +312,9 @@ Y se edita:
 //192.168.1.250/comun  /home/user1/Documentos/Servidor/Comun     cifs  credentials=/root/.smb-user1,uid=1000,gid=1000,file_mode=0600,dir_mode=0700,iocharset=utf8,_netdev,nofail,x-systemd.automount  0  0
 ```
 
+> [!Nota]
+> Al agregarse estas líneas cuando el programa de systemd `systemd-fstab-generator` lea fstab generará una unidad `.mount` y una unidad `.automount`.
+
 Hecho esto se recarga `fstab` y se monta:
 ```bash
 user1@pc~$ sudo systemctl daemon-reload
