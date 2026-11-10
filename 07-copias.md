@@ -248,8 +248,8 @@ done
 registrar "Fin de la copia"
 exit $errores
 ```
-> [! NOTE]
-> En una versión anterior del documento `MAX_BORRADOS` estaba en 100.
+> [!NOTE]
+> En una versión anterior del documento `MAX_BORRADOS` estaba en 100 (por eso la *Prueba 2* usa 101 archivos). Más adelante en el paso 9 se subió a 300.
 
 
 ## Permisos y primera ejecución

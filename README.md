@@ -51,10 +51,10 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Conexión con el servidor.
     - Comprobación de configuración de red.
     - Establecer una IP fija.
-- [**3. Ajustes**](03-ajustes.md): se establece una configuración básica al equipo que hará de servidor.
+- [**3. Ajustes**](03-ajustes.md): se establece la configuración básica al equipo que hará de servidor.
     - Actualizaciones automáticas.
     - Modificar comportamiento de la tapa.
-- [**4. Discos**](04-discos.md):
+- [**4. Discos**](04-discos.md): se configuran los discos y se hace una automatización de montaje.
     - Conectar e identificar discos.
     - Borrado de las firmas previas de los discos.
     - Particionar disco principal para LVM.
@@ -63,18 +63,18 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Preparar disco de backups.
     - Automatización de los montajes.
     - Aplicar y comprobar.
-- [**5. Usuarios**](05-usuarios.md):
+- [**5. Usuarios**](05-usuarios.md): configuración con permisos clásicos.
     - Crear grupo y usuarios.
     - Aplicar permisos.
     - Pruebas de permisos.
-- [**6. Samba y smb**](06-samba.md):
+- [**6. Samba y smb**](06-samba.md): gestión másica de smb.
     - Instalación.
     - Configurar carpetas compartidas.
     - Crear y aplicar contraseñas.
     - Probar Samba desde el propio servidor.
     - Configurar acceso a servidor y montaje de carpetas en user1 (Linux).
     - Configurar acceso a servidor y montaje de carpetas en user2 (Windows).
-- [**7. Copia de seguridad**](07-copias.md):
+- [**7. Copia de seguridad**](07-copias.md): configuración y automatización de copias de seguridad.
     - Preparar copia.
     - Pruebas de copia.
     - Desarrollo del script.
@@ -83,7 +83,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Programar copia de seguridad.
     - Retauración de copia.
     - Rotación de archivos de registro.
-- [**8. Mantenimiento**](08-mantenimiento.md):
+- [**8. Mantenimiento**](08-mantenimiento.md): configuración de una mecánica básica de mantenimiento automatizado y notificaciones por email.
     - Comprobaciones de estado
     - Elaborar un informe de estado.
     - Probar el informe.
@@ -92,10 +92,13 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Automatizar envío de informe por email.
     - Programar envío de informe.
     - Aviso urgente en caso de fallo de copia.
-- [**9. Reenviar informes**](09-reenviar.md): se arregla problema de interrupción de envío de informe.
+- [**9. Reenviar informes**](09-reenviar.md): arregla problema de interrupción de envío de informe.
     - Descripción del problema.
     - Configurar reintentos.
     - Prueba de reintentos.
+- [**10. Seguridad**](10-seguridad.md)
+    - Identificar servicios en ejecución.
+    - 
 
 ## Tecnologías usadas
 
