@@ -1,10 +1,6 @@
-# Soluciones
+# Error 13 Permission denied
 
-Posibles soluciones ante fallos que han ido apareciendo con el uso cotidiano del proyecto.
-
-- Error 13 Permission denied.
-
-## Error 13 Permission denied
+## Descripción del error
 
 Al entrar a la carpeta *Personal* de user1 aparece el siguiente aviso:
 
@@ -239,7 +235,7 @@ Y en el mismo manual encontramos `start [PATTERN]` para iniciar unidades:
 ❯ sudo systemctl start home-user1-Documentos-Servidor-Personal.automount
 ```
 
-Tras esto se entrar:
+Tras esto se entra:
 
 ```bash
 ❯ ls -l ~/Documentos/Servidor/Personal

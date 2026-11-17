@@ -99,8 +99,10 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 - [**10. Seguridad**](10-seguridad.md)
     - Identificar servicios en ejecución.
     - Retirar bluetooth, nmbd, cerrar puertos 137, 138 y 139, y retirar winbind.
-- [**11. Soluciones**](11-soluciones.md)
-    - Error 13 Permission denied.
+- **11. Soluciones**
+    - [Error 13 Permission denied](11-soluciones/01-error13.md). 
+    - [Código 23 de rsync](11-soluciones/02-codigo23.md).
+
 
 ## Tecnologías usadas
 
