@@ -78,7 +78,7 @@ El volumen que se monta en `/srv/user1` admite lectura y escritura. Cuando se de
 
 ### Comprobar escritura (archivo canario)
 
-Archivo que se guarda en el volumen y se borra inmediatamente, con el objetivo de comprobar que se está pudiendo operar en él.
+Un canary file se guarda en el volumen y se borra inmediatamente, con el objetivo de comprobar que se está pudiendo operar en él.
 
 ```bash
 sysadmin@servidor:~$ sudo touch /srv/user1/.testigo_escritura && sudo rm /srv/user1/.testigo_escritura
@@ -128,3 +128,69 @@ La lógica sería:
 6. ¿Se puede crear y borrar archivo canario?
 	- No → señalar error y pasar al siguiente ciclo.
 	- Sí → señalar que está todo correcto y pasa al siguiente ciclo.
+
+
+```ini
+#!/bin/bash
+
+VOLUMENES="/srv/user1 /srv/user2 /srv/copias /srv/comun"
+CANARIO=".testigo_escritura"
+errores=0
+
+for volumen in $VOLUMENES; do
+	
+	if ! mountpoint -q "$volumen"; then
+		echo "ERROR: $volumen no está montado"
+		errores=1
+		continue
+	fi
+	
+	dispositivo=$(findmnt -no SOURCE "$volumen")
+	
+	if ! dd if="$dispositivo" of=/dev/null bs=4096 count=1 iflag=direct status=none; then
+		echo "ERROR: el disco de $volumen no responde"
+		errores=1
+		continue
+	fi
+	
+	if findmnt -no OPTIONS "$volumen" | grep -qE '^ro(,|$)'; then
+		echo "ERROR: $volumen está en solo lectura"
+		errores=1
+		continue
+	fi
+	
+	if ! { touch "$volumen"/"$CANARIO" && rm "$volumen"/"$CANARIO"; }; then
+		echo "ERROR: no se puede operar en $volumen"
+		errores=1
+		continue
+	fi
+	echo "OK: $volumen ha superado todas las comprobaciones"
+done
+
+exit $errores
+```
+
+Se agrega el script en:
+
+```bash
+sysadmin@servidor:~$ sudo nano /usr/local/sbin/comprobar-volumenes.sh
+```
+
+Se modifican permisos:
+
+```bash
+sysadmin@servidor:~$ sudo chown root:root /usr/local/sbin/comprobar-volumenes.sh
+sysadmin@servidor:~$ sudo chmod 750 /usr/local/sbin/comprobar-volumenes.sh
+sysadmin@servidor:~$ sudo bash -n /usr/local/sbin/comprobar-volumenes.sh
+```
+
+Se prueba:
+
+```bash
+sysadmin@servidor:~$ sudo /usr/local/sbin/comprobar-volumenes.sh; echo $?
+OK: /srv/user1 ha superado todas las comprobaciones
+OK: /srv/user2 ha superado todas las comprobaciones
+OK: /srv/copias ha superado todas las comprobaciones
+OK: /srv/comun ha superado todas las comprobaciones
+0
+```
