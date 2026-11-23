@@ -1,5 +1,11 @@
 # Error 13 Permission denied
 
+**Apartados:**
+- Descripción del error.
+- Ver estado de montajes.
+- Pruebas de conectividad y ahorro de energía.
+- Desbloqueo de carpeta personal en user1.
+
 ## Descripción del error
 
 Al entrar a la carpeta *Personal* de user1 aparece el siguiente aviso:
@@ -7,6 +13,8 @@ Al entrar a la carpeta *Personal* de user1 aparece el siguiente aviso:
 > **No se pudo acceder a «Personal»**
 > <br>error 13 (Permission denied) opening credential
 > <br>file /root/.smb-user1
+
+## Ver estado de montajes
 
 ### Ver estado de montajes automáticos en user1
 
@@ -111,6 +119,8 @@ Se identifica:
 - Informa que el host está caído.
 - Da referencias a manuales de cifs y dmesg.
 - Tras varios intentos de montaje se disparó el límite de intentos de montaje establecidos en la configuración y se detuvo el sistema.
+
+## Pruebas de conectividad y ahorro de energía
 
 ### Pruebas de conectividad servidor-user1
 
@@ -219,7 +229,7 @@ post-up /usr/sbin/iw dev wlp2s0 set power_save off || true
 
 Se puede comprobar cambio reiniciando el servidor y comprobando el estado de `power_save`. Además es útil aplicar el mismo procedimiento en el PC de user1.
 
-### Desbloquear carpeta personal en user1
+## Desbloqueo de carpeta personal en user1
 
 Tras los fallos en montaje systemd marcó la unidad como fallida al superar los límites de intentos y mientras sigan marcadas no se vuele a intentar montar.
 

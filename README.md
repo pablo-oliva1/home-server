@@ -92,16 +92,14 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Automatizar envío de informe por email.
     - Programar envío de informe.
     - Aviso urgente en caso de fallo de copia.
-- [**9. Reenviar informes**](09-reenviar.md): arregla problema de interrupción de envío de informe.
-    - Descripción del problema.
-    - Configurar reintentos.
-    - Prueba de reintentos.
-- [**10. Seguridad**](10-seguridad.md)
+
+- [**9. Seguridad**](09-seguridad.md)
     - Identificar servicios en ejecución.
     - Retirar bluetooth, nmbd, cerrar puertos 137, 138 y 139, y retirar winbind.
-- **11. Soluciones**
-    - [Error 13 Permission denied](11-soluciones/01-error13.md). 
-    - [Código 23 de rsync](11-soluciones/02-codigo23.md).
+- **10. Solución de problemas**
+    - [Reenviar informes](09-reenviar.md): informe semanal no se envía.
+    - [Error 13 Permission denied](11-soluciones/01-error13.md): no se puede acceder a la carpeta personal.
+    - [Código 23 de rsync](11-soluciones/02-codigo23.md): no detecta desconexión del disco.
 
 
 ## Tecnologías usadas

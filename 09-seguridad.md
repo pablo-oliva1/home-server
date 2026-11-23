@@ -1,5 +1,8 @@
 # Seguridad
 
+**Apartados:**
+- Retirar servicios en ejecución no imprescibdibles.
+
 ## Retirar servicios en ejecución no imprescindibles
 
 ### Identificar servicios
