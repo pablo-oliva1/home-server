@@ -1,4 +1,4 @@
-# 10-3.Código 23 de rsync
+# 10-3. Código 23 de rsync
 
 - Descripción del problema.
 - Comprobaciones.

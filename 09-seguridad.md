@@ -9,7 +9,7 @@
 
 Con `systemctl` para consultar eventos, enlistando las unidades cargadas (servicios, temporizadores, montajes, etc), pero filtrando por servicios que estén en ejecución.
 
-```bashrc
+```bash
 sysadmin@servidor:~$ systemctl list-units --type=service --state=running --no-pager
 
   UNIT                        LOAD   ACTIVE SUB     DESCRIPTION                           

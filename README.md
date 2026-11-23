@@ -36,7 +36,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 |Sistema operativo|Debian 13.7 sin entorno gráfico|
 |IP|192.168.1.250 fijada|
 |Usuarios|Administrador (sysadmin), user1 (Linux) y user2 (Windows)|
-|Acceso a los archivos|Samba, montaje autmático en Linux y unidades de red en Windows|
+|Acceso a los archivos|Samba, montaje automático en Linux y unidades de red en Windows|
 |Copias de seguridad|Copia espejo diaria a las 3:00|
 |Informe de estado|Por email los lunes a las 8:00, y aviso urgente si falla la copia de seguridad|
 |Vigilancia de volúmenes|Comprobación cada hora y aviso por email si un volumen falla|
@@ -68,7 +68,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Crear grupo y usuarios.
     - Aplicar permisos.
     - Pruebas de permisos.
-- [**6. Samba y smb**](06-samba.md): gestión másica de smb.
+- [**6. Samba y smb**](06-samba.md): gestión básica de smb.
     - Instalación.
     - Configurar carpetas compartidas.
     - Crear y aplicar contraseñas.
@@ -82,7 +82,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Permisos y primera ejecución.
     - Pruebas al sistema.
     - Programar copia de seguridad.
-    - Retauración de copia.
+    - Restauración de copia.
     - Rotación de archivos de registro.
 - [**8. Mantenimiento**](08-mantenimiento.md): configuración de una mecánica básica de mantenimiento automatizado y notificaciones por email.
     - Comprobaciones de estado
@@ -118,7 +118,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 ### Red
 - ifupdown.
 - resolvconf.
-- iw.com
+- iw.
 
 ### Almacenamiento
 - parted.
