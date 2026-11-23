@@ -1,4 +1,4 @@
-# Error 13 Permission denied
+# 10-2. Error 13 Permission denied
 
 **Apartados:**
 - Descripción del error.

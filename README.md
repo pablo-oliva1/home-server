@@ -39,6 +39,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 |Acceso a los archivos|Samba, montaje autmático en Linux y unidades de red en Windows|
 |Copias de seguridad|Copia espejo diaria a las 3:00|
 |Informe de estado|Por email los lunes a las 8:00, y aviso urgente si falla la copia de seguridad|
+|Vigilancia de volúmenes|Comprobación cada hora y aviso por email si un volumen falla|
 
 
 ## Proceso
@@ -97,9 +98,9 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
     - Identificar servicios en ejecución.
     - Retirar bluetooth, nmbd, cerrar puertos 137, 138 y 139, y retirar winbind.
 - **10. Solución de problemas**
-    - [Reenviar informes](09-reenviar.md): informe semanal no se envía.
-    - [Error 13 Permission denied](11-soluciones/01-error13.md): no se puede acceder a la carpeta personal.
-    - [Código 23 de rsync](11-soluciones/02-codigo23.md): no detecta desconexión del disco.
+    - [Reenviar informes](10-soluciones/01-reenviar.md): informe semanal no se envía.
+    - [Error 13 Permission denied](10-soluciones/02-error13.md): no se puede acceder a la carpeta personal.
+    - [Código 23 de rsync](10-soluciones/03-codigo23.md): no detecta desconexión del disco.
 
 
 ## Tecnologías usadas
@@ -117,12 +118,14 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 ### Red
 - ifupdown.
 - resolvconf.
+- iw.com
 
 ### Almacenamiento
 - parted.
 - wipefs.
 - ext4.
 - chattr.
+- LVM2.
 
 ### Compartición de archivos
 - Samba, protocolo SMB, smbpasswd, pdbedit, testparm, smbclient.
