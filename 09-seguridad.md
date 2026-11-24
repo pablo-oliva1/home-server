@@ -2,6 +2,7 @@
 
 **Apartados:**
 - Retirar servicios en ejecución no imprescibdibles.
+- Comprobar acceso por IPv6.
 
 ## Retirar servicios en ejecución no imprescindibles
 
@@ -165,3 +166,32 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 
 12 loaded units listed.
 ```
+
+## Comprobar acceso por IPv6
+
+La IP fija se configura para IPv4 pero la autoconfiguración para IPv6 puede seguir activa. Si existe una IPv6 pública y no se filtra el tráfico entrante queda abierto un vector de vulnerabilidad que permitiría control del servidor y acceso a los datos de los discos.
+
+```bash
+sysadmin@servidor:~$ ip -6 addr show scope global
+```
+
+En este caso no hay respuesta al comando, el servidor no tiene ninguna IPv6 pública de forma que no es alcanzable desde Internet por IPv6.
+
+Para confirmar:
+
+```bash
+sysadmin@servidor:~$ ip -6 addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+3: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP qlen 1000
+    inet6 fe80::xxxx:xxxx:xxxx:xxxx/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+```
+- `scope host` llega solo dentro del propio servidor.
+- `scope link` solo alcanza la red local.
+
+Que no aparezca una dirección con `scope global` confirma que no hay acceso IPv6 desde internet.
+
+> [!NOTE]
+> En el futuro el servidor podría recibir una dirección IPv6 pública y la línea de seguridad pasaría a depender del cortafuegos.

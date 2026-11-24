@@ -97,6 +97,7 @@ En cuanto a los discos uno se extrajo de otro portátil en desuso, y otro es un 
 - [**9. Seguridad**](09-seguridad.md)
     - Identificar servicios en ejecución.
     - Retirar bluetooth, nmbd, cerrar puertos 137, 138 y 139, y retirar winbind.
+    - Comprobar acceso por IPv6.
 - **10. Solución de problemas**
     - [Reenviar informes](10-soluciones/01-reenviar.md): informe semanal no se envía.
     - [Error 13 Permission denied](10-soluciones/02-error13.md): no se puede acceder a la carpeta personal.
